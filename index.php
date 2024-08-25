@@ -31,48 +31,6 @@ require_once 'includes/betOdd.php';
     <script src="script.js"></script>
     <title>Document</title>
     <script>
-    function oddBet() {
-        // This works 
-        var xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            var response = JSON.parse(this.responseText);
-            var generatedNum = response.generatedNum;
-            
-        // Get the number of coins text
-        var curBet = document.getElementById("betInput").value;
-        var curCredits = document.getElementById("curCreds").innerHTML;
-        // Create a form to send all the data to php and append data to it
-        console.log(generatedNum);
-        document.getElementById("chosenNum").textContent = generatedNum;
-        var formData = new FormData();
-        if (generatedNum % 2){
-            formData.append("odd", 2); // Odd (good)
-        } else{
-            formData.append("odd", 1); // Even (bad)
-        }   
-        formData.append("curBet", curBet);
-        formData.append("curCredits", curCredits);
-
-
-        // Now for the NumGen we open another ajax request
-        var betRequest = new XMLHttpRequest();
-        betRequest.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("curCreds").innerHTML = this.responseText;
-            }
-        };
- 
-
-        // Open a request for betOdd
-            betRequest.open("POST", "includes/betOdd.php", true);
-            betRequest.send(formData);
-            }
-        };
-        xmlhttp.open("GET", "includes/numGen.php", true);
-        xmlhttp.send();
-    }
-
 </script>
 </head>
 <body>
@@ -83,8 +41,10 @@ require_once 'includes/betOdd.php';
     </div>
     <div id="betDiv">
         <button id="betOdd" name="betOdd" onclick="oddBet()">Bet on odd</button>
-        <button id="betEven" name="betEven">Bet on even</button>
+        <button id="betEven" name="betEven" onclick="evenBet()">Bet on even</button>
     </div>
         <h1>The chosen number is: <a id="chosenNum" name="chosenNum"></a></h1>
 </body>
 </html>
+
+<!-- This is still broken since the user can input some dumb number like 1.4 or maybe even not a number to the input field, and he can change the js code so that's also broken -->
