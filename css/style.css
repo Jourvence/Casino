@@ -1,9 +1,30 @@
-body{
-    background-color: rgb(128, 50, 50);
-    text-align: center;
+body {
+    background-color: #f8f9fa; /* Light grey background */
+    color: #343a40; /* Dark grey text */
+    font-family: Arial, sans-serif;
 }
 
-#betInput{
-    background-color: white;
-    margin-bottom: 10px;
+.navbar {
+    border-bottom: 2px solid black; /* Black border at the bottom of the navbar */
+}
+
+h1, h2 {
+    color: #343a40; /* Dark grey for headings */
+}
+
+#amountDiv input {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+#betDiv button {
+    width: 120px;
+}
+
+/* Center everything vertically */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 70vh;
 }
