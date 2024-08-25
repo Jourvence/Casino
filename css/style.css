@@ -1,0 +1,9 @@
+body{
+    background-color: rgb(128, 50, 50);
+    text-align: center;
+}
+
+#betInput{
+    background-color: white;
+    margin-bottom: 10px;
+}
