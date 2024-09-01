@@ -1,0 +1,15 @@
+make a red center line
+make a box
+make multiple boxes,
+label the boxes with numbers
+make them "scroll out"
+get a random number
+"rotate them x amount of degrees depending on what is the number" (1 num box degree, * position)
+set a rand variable for the scrolling animation
+do a winning (green text)/ losing (red text) when the roll finishes
+
+
+MISC
+add a dark/light theme button 
+
+It would be sick If It would be multiplayer so that I can play It with my buddies

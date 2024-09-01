@@ -4,6 +4,36 @@ body {
     font-family: Arial, sans-serif;
 }
 
+.mainContainer{
+    display: flex;
+    justify-content: center;
+    height: 30px;
+}
+
+.rouletteLine{
+    position: absolute;
+    height: 30px;
+    left: 50%;
+    background-color: red;
+    width: 2px;
+}
+.rouletteBoxesContainer{
+    z-index: 5;
+    display: inline-flex;
+}
+
+.box{
+    z-index: 5;
+    width: 30px;
+    border: 1px solid rgb(69, 69, 69);
+    margin: 2px;
+}
+
+.box:nth-child(even){
+    border: 1px solid rgb(57, 56, 56);
+    background-color: grey;
+}
+
 .navbar {
     border-bottom: 2px solid black; /* Black border at the bottom of the navbar */
 }
@@ -27,4 +57,20 @@ h1, h2 {
     flex-direction: column;
     justify-content: center;
     height: 70vh;
+}
+
+#testButton{
+    background-color: rgb(214, 214, 214);
+    height: 30px;
+    width: 90px;
+    font-size: 15px;
+    font-weight: 300;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border: 2px solid rgb(187, 187, 187);
+    border-radius: 20px;
+}
+
+#testButton:hover{
+    cursor: pointer;
+    border: 2px solid #2e2f30;
 }

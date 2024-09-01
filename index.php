@@ -29,10 +29,12 @@ require_once 'includes/betOdd.php';
     <title>The Grand Casino</title>
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Js box load -->
+    <script src="boxLoader.js"></script>
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body onload="loadBoxes()">
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">The Grand Casino</a>
@@ -41,6 +43,12 @@ require_once 'includes/betOdd.php';
     <!-- Main Content -->
     <div class="container text-center">
         <h1 class="mt-5">The Grand Casino Inc.</h1>
+        <div class="mainContainer">
+            <!-- Scrollable area with boxes -->
+            <div class="rouletteBoxesContainer">
+                <div class="RouletteLine"></div> 
+            </div>
+        </div>
         <h2 class="mt-3">You currently have: <span id="curCreds"><?php echo $currentCredits; ?></span> credits</h2>
 
 
@@ -51,10 +59,14 @@ require_once 'includes/betOdd.php';
         <div id="betDiv" class="mt-4">
             <button id="betOdd" name="betOdd" class="btn btn-primary mr-2" onclick="oddBet()">Bet on odd</button>
             <button id="betEven" name="betEven" class="btn btn-secondary ml-2" onclick="evenBet()">Bet on even</button>
+            
+            <h1 class="mt-5">The chosen number is: <span id="chosenNum" name="chosenNum"></span></h1>
+            <button id="testButton">SPIN</button>
         </div>
-
-        <h1 class="mt-5">The chosen number is: <span id="chosenNum" name="chosenNum"></span></h1>
     </div>
+
+
+    
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
