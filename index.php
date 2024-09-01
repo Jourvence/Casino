@@ -63,7 +63,7 @@ require_once 'includes/betOdd.php';
             <button id="betEven" name="betEven" class="btn btn-secondary ml-2" onclick="evenBet()">Bet on even</button>
             
             <h1 class="mt-5">The chosen number is: <span id="chosenNum" name="chosenNum"></span></h1>
-            <button id="testButton" onclick="moveEm()">SPIN</button>
+            <button id="testButton" onclick="moveEm(200)">SPIN</button>
         </div>
     </div>
 
