@@ -27,11 +27,13 @@ require_once 'includes/betOdd.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Grand Casino</title>
-    <!-- Bootstrap CSS -->
+    <!-- Bootstrap -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <!-- Js box load -->
     <script src="boxLoader.js"></script>
-    <!-- Custom CSS -->
+    <!-- moveEm -->
+     <script src="scroll.js"></script>
+    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body onload="loadBoxes()">
@@ -46,8 +48,8 @@ require_once 'includes/betOdd.php';
         <div class="mainContainer">
             <!-- Scrollable area with boxes -->
             <div class="rouletteBoxesContainer">
-                <div class="RouletteLine"></div> 
             </div>
+            <div class="RouletteLine"></div> 
         </div>
         <h2 class="mt-3">You currently have: <span id="curCreds"><?php echo $currentCredits; ?></span> credits</h2>
 
@@ -61,7 +63,7 @@ require_once 'includes/betOdd.php';
             <button id="betEven" name="betEven" class="btn btn-secondary ml-2" onclick="evenBet()">Bet on even</button>
             
             <h1 class="mt-5">The chosen number is: <span id="chosenNum" name="chosenNum"></span></h1>
-            <button id="testButton">SPIN</button>
+            <button id="testButton" onclick="moveEm()">SPIN</button>
         </div>
     </div>
 

@@ -16,6 +16,7 @@ body {
     left: 50%;
     background-color: red;
     width: 2px;
+    z-index: 20;
 }
 .rouletteBoxesContainer{
     z-index: 5;
@@ -27,6 +28,7 @@ body {
     width: 30px;
     border: 1px solid rgb(69, 69, 69);
     margin: 2px;
+    transition: transform 0.5s ease; /* Smooth */
 }
 
 .box:nth-child(even){
