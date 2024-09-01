@@ -6,7 +6,8 @@ body {
 
 .mainContainer{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     height: 30px;
 }
 
@@ -16,7 +17,7 @@ body {
     left: 50%;
     background-color: red;
     width: 2px;
-    z-index: 20;
+    z-index: 20px;
 }
 .rouletteBoxesContainer{
     z-index: 5;
@@ -28,12 +29,13 @@ body {
     width: 30px;
     border: 1px solid rgb(69, 69, 69);
     margin: 2px;
-    transition: transform 0.5s ease; /* Smooth */
+    transition: transform 3s ease; /* Smooth */
 }
 
 .box:nth-child(even){
     border: 1px solid rgb(57, 56, 56);
     background-color: grey;
+    z-index: 5;
 }
 
 .navbar {

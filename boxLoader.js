@@ -1,8 +1,6 @@
 function loadBoxes() {
     console.log("temp");
-
-    const rouletteNumbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"]
-
+    const rouletteNumbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"];
     var theDiv = document.getElementsByClassName("rouletteBoxesContainer")[0];
     for (let i = 0; i < 5; i++) {
         for (let index = 0; index < 11; index++) {
@@ -14,6 +12,46 @@ function loadBoxes() {
         }
     }
 }
+
+
+// I don't even know how to make it work without it disturbing all the shit
+
+// function boxUpdate(){
+//     const rouletteNumbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"];
+//     var theDiv = document.getElementsByClassName("rouletteBoxesContainer")[0];
+//     for (let i = 0; i < 1; i++) {
+//         for (let index = 0; index < 11; index++) {
+
+//             var content = document.createElement("div");
+//             content.textContent = rouletteNumbers[index];
+//             content.className = "box";
+//             theDiv.appendChild(content);
+//         }
+//     }
+// }
+
+
+
+
+
+
+
+function boxUpdate(){
+    const rouletteNumbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"];
+    var theDiv = document.getElementsByClassName("rouletteBoxesContainer")[0];
+    for (let x = 0; x < 1; x++) {
+        for (let index = 0; index < 11; index++) {
+            var content = document.createElement("div");
+            content.textContent = rouletteNumbers[index];
+            content.className = "box";
+            // theDiv.removeChild(theDiv.firstElementChild);
+            theDiv.appendChild(content);
+        }
+    }
+}
+
+
+
 
 {/* <div class="box">1</div>
 <div class="box">2</div>
