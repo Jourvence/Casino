@@ -19,7 +19,7 @@ function moveEm(usrVal) {
     const container = document.querySelector(".rouletteBoxesContainer");
     const boxes = container.children;
     usrVal = Number(usrVal);
-    
+    transitionTime = Math.floor(Math.random(6) + 3);
 
     if (rolledOnce) {
         
@@ -31,7 +31,7 @@ function moveEm(usrVal) {
         }
 
    
-        setTransitionTime(2);
+        setTransitionTime(transitionTime);
     }
 
     rolledOnce = 1; 
@@ -45,6 +45,7 @@ function moveEm(usrVal) {
     
 
     offset2 = usrVal;
+    return transitionTime;
 }
 
 
@@ -60,6 +61,7 @@ function setTransitionTime(time) {
 }
 
 
+// This returns the offsets so that It lands on the correct field according to the number chosen by the server
 function getOffset(val){
     switch (val){
         case 1:
@@ -81,7 +83,7 @@ function getOffset(val){
             return 1320;
             // good
         case 7:
-            return 3590;
+            return 3205;
             // good
         case 8:
             return 630;
@@ -90,7 +92,7 @@ function getOffset(val){
             return 290;
             // good
         case 10:
-            return 320;
+            return 2200;
             // good
         case 11:
             return 2980;
@@ -106,7 +108,3 @@ function getOffset(val){
 //     });
 // });
 
-
-// Everything is cool and stuff, but I already have a number generator, and I need to supply that number that gets generated from the odd and even buttons, and then just generate the offset accordingly
-// I missed the actual point of what I needed to do lol
-// Also keep in mind that you have 20 rand numbers on the odd and even button and only 12 blocks with nums, so either more numbers on the blocks or a smaller range of nums being generated

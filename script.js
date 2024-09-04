@@ -20,7 +20,11 @@ function oddBet() {
 
     // Create a form to send all the data to php and append data to it
     document.getElementById("chosenNum").textContent = generatedNum;
-    moveEm(generatedNum);
+
+
+    timeToWait = moveEm(generatedNum);
+   
+
     var formData = new FormData();
     if (generatedNum % 2){
         formData.append("odd", 2); // Odd (good)
@@ -71,7 +75,10 @@ function evenBet() {
 
     // Create a form to send all the data to php and append data to it
     document.getElementById("chosenNum").textContent = generatedNum;
-    moveEm(generatedNum);
+
+    timeToWait = moveEm(generatedNum)
+   
+
     var formData = new FormData();
     if (generatedNum % 2){
         formData.append("even", 1); // Even (good)
@@ -99,3 +106,7 @@ function evenBet() {
     xmlhttp.open("GET", "includes/numGen.php", true);
     xmlhttp.send();
 }
+
+
+// For now I need to freeze the buttons for the time that It will be rolling.
+// And After It's finished rolling then I need to update the users credits
