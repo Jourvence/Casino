@@ -19,17 +19,22 @@ body {
     width: 2px;
     z-index: 20px;
 }
-.rouletteBoxesContainer{
-    z-index: 5;
-    display: inline-flex;
+
+.rouletteBoxesContainer {
+    display: flex;
+    justify-content: center; /* Center the boxes horizontally */
+    overflow: hidden; /* Hide the overflowing content */
+    position: relative;
+    width: 100%; /* Make the container responsive */
 }
 
-.box{
+.box {
     z-index: 5;
-    width: 30px;
+    width: 30px; /* Fixed width for each box */
     border: 1px solid rgb(69, 69, 69);
     margin: 2px;
-    transition: transform 3s ease; /* Smooth */
+    transition: transform 3s ease; /* Smooth transition */
+    flex: 0 0 auto; /* Prevent the boxes from shrinking or growing */
 }
 
 .box:nth-child(even){

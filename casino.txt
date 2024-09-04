@@ -13,3 +13,11 @@ MISC
 add a dark/light theme button 
 
 It would be sick If It would be multiplayer so that I can play It with my buddies
+
+BONUS (epic pro gamer move)
+
+I could somehow use ajax so that instead of loading a shit ton of boxes I could just load more boxes when I scroll to left
+that way I'd never run out of them and I woudn't need to center them again after rolling
+
+I most likely need to append a new element and delete the first element so that I don't get too many elements
+and i need AJAX for that

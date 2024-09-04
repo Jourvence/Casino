@@ -47,7 +47,8 @@ require_once 'includes/betOdd.php';
         <h1 class="mt-5">The Grand Casino Inc.</h1>
         <div class="mainContainer">
             <!-- Scrollable area with boxes -->
-            <div class="rouletteBoxesContainer">
+            <div class="rouletteBoxesContainer" id="test7">
+
             </div>
             <div class="RouletteLine"></div> 
         </div>
@@ -66,10 +67,6 @@ require_once 'includes/betOdd.php';
             <button id="testButton" onclick="moveEm(200)">SPIN</button>
         </div>
     </div>
-
-
-    
-
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <!-- Custom Script -->
