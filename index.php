@@ -31,8 +31,8 @@ require_once 'includes/betOdd.php';
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <!-- Js box load -->
     <script src="boxLoader.js"></script>
-    <!-- moveEm -->
-     <!-- <script src="scroll.js"></script> -->
+    <!-- lightMode -->
+    <script src="lightMode.js"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -40,6 +40,7 @@ require_once 'includes/betOdd.php';
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">The Grand Casino</a>
+        <button id="lightModeButton" onclick="lightMode()"></button>
     </nav>
 
     <!-- Main Content -->

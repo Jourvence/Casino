@@ -69,10 +69,10 @@ h1, h2 {
     height: 70vh;
 }
 
-#testButton{
+#lightModeButton{
     background-color: rgb(214, 214, 214);
-    height: 30px;
-    width: 90px;
+    height: 15px;
+    width: 30px;
     font-size: 15px;
     font-weight: 300;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -80,7 +80,7 @@ h1, h2 {
     border-radius: 20px;
 }
 
-#testButton:hover{
+#lightModeButton:hover{
     cursor: pointer;
     border: 2px solid #2e2f30;
 }
