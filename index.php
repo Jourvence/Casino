@@ -32,7 +32,7 @@ require_once 'includes/betOdd.php';
     <!-- Js box load -->
     <script src="boxLoader.js"></script>
     <!-- moveEm -->
-     <script src="scroll.js"></script>
+     <!-- <script src="scroll.js"></script> -->
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -64,13 +64,15 @@ require_once 'includes/betOdd.php';
             <button id="betEven" name="betEven" class="btn btn-secondary ml-2" onclick="evenBet()">Bet on even</button>
             
             <h1 class="mt-5">The chosen number is: <span id="chosenNum" name="chosenNum"></span></h1>
-            <button id="testButton" onclick="moveEm(200)">SPIN</button>
+            <button id="testButton">SPIN</button>
+            <!-- Now I need to make this number provided from php -->
         </div>
     </div>
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <!-- Custom Script -->
     <script src="script.js"></script>
+    <script src="scroll.js"></script>
 </body>
 </html>
 

@@ -20,6 +20,7 @@ body {
     z-index: 20px;
 }
 
+/* bars  */
 .rouletteBoxesContainer {
     display: flex;
     justify-content: center; /* Center the boxes horizontally */

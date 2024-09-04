@@ -1,47 +1,69 @@
-let rolledOnce = 0;
-let offset2 = 0;
+let rolledOnce = 0; 
+let offset2 = 0; 
 
+// Get random number from php via ajax
+function fetchRandomNumber() {
+    return fetch('getRandNum.php') 
+        .then(response => response.json())
+        .then(data => data.randomNumber)
+        .catch(error => {
+            console.error('Error fetching random number:', error);
+            return 0; 
+        });
+}
 
 
 function moveEm(usrVal) {
-    container = document.querySelector(".rouletteBoxesContainer");
-    var boxes = container.children;
+    // usrVal is supplied via ajax
 
+    const container = document.querySelector(".rouletteBoxesContainer");
+    const boxes = container.children;
 
-   
-    // Temporary thing
-    usrVal = Math.floor(Math.random() * 2000) + 500;
-    if (rolledOnce){
-     
-        // Now I need to revert the 
-        setTransitionTime(0);
+    if (rolledOnce) {
         
+        setTransitionTime(0); 
+        
+
         for (let index = 0; index < boxes.length; index++) {
             boxes[index].style.transform = `translateX(+${offset2}px)`;
         }
-        setTransitionTime(2);
-        console.log("now");
-    }
-
-    rolledOnce = 1;
 
    
+        setTransitionTime(2);
+    }
+
+    rolledOnce = 1; 
+
+
     for (let index = 0; index < boxes.length; index++) {
         boxes[index].style.transform = `translateX(-${usrVal}px)`;
-        offset2 = usrVal;
     }
-   
     
+
+    offset2 = usrVal;
 }
 
-// Each roll, go to the starting position and calculate offset from there
 
+// Delete animation timing manipulation so that It works smoothly reverted to starting pos
 function setTransitionTime(time) {
-    // Select all elements with the class "box"
+  
     const boxes = document.querySelectorAll('.box');
     
-    // Loop through each element and set the transition time
+
     boxes.forEach(box => {
         box.style.transition = `transform ${time}s ease`;
     });
 }
+
+
+
+// Make the button work
+document.getElementById('testButton').addEventListener('click', function () {
+    fetchRandomNumber().then(randomNumber => {
+        moveEm(randomNumber); 
+    });
+});
+
+
+// Everything is cool and stuff, but I already have a number generator, and I need to supply that number that gets generated from the odd and even buttons, and then just generate the offset accordingly
+// I missed the actual point of what I needed to do lol
