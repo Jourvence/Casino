@@ -20,6 +20,7 @@ function oddBet() {
 
     // Create a form to send all the data to php and append data to it
     document.getElementById("chosenNum").textContent = generatedNum;
+    moveEm(generatedNum);
     var formData = new FormData();
     if (generatedNum % 2){
         formData.append("odd", 2); // Odd (good)
@@ -70,6 +71,7 @@ function evenBet() {
 
     // Create a form to send all the data to php and append data to it
     document.getElementById("chosenNum").textContent = generatedNum;
+    moveEm(generatedNum);
     var formData = new FormData();
     if (generatedNum % 2){
         formData.append("even", 1); // Even (good)

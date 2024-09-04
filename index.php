@@ -64,7 +64,7 @@ require_once 'includes/betOdd.php';
             <button id="betEven" name="betEven" class="btn btn-secondary ml-2" onclick="evenBet()">Bet on even</button>
             
             <h1 class="mt-5">The chosen number is: <span id="chosenNum" name="chosenNum"></span></h1>
-            <button id="testButton">SPIN</button>
+            <!-- <button id="testButton">SPIN</button> -->
             <!-- Now I need to make this number provided from php -->
         </div>
     </div>

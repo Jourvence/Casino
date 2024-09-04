@@ -1,6 +1,6 @@
 <?php
 function numGenerate() {
-    $chosen = rand(1, 20);
+    $chosen = rand(1, 11);
     return $chosen;
 }
 
