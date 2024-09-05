@@ -21,3 +21,10 @@ that way I'd never run out of them and I woudn't need to center them again after
 
 I most likely need to append a new element and delete the first element so that I don't get too many elements
 and i need AJAX for that
+
+
+This is written after dark/light mode is done
+
+Prevent user from betting when they have insufficient funds
+
+I should also add my github on the navbar

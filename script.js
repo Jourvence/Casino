@@ -1,5 +1,6 @@
 function oddBet() {
     // This works 
+    
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
@@ -17,6 +18,10 @@ function oddBet() {
         var curBet = document.getElementById("betInput").value;
         var curCredits = document.getElementById("curCreds").innerHTML;
         curBet = Math.abs(Number(curBet));
+
+        if (curBet > curCredits){
+            return;
+        }
 
         // Create a form to send all the data to php and append data to it
         // document.getElementById("chosenNum").textContent = generatedNum; // COMMENT 2/3 FOR DISPLAYER
@@ -79,6 +84,10 @@ function evenBet() {
         var curCredits = document.getElementById("curCreds").innerHTML;
         curBet = Math.abs(Number(curBet));
 
+        if (curBet > curCredits){
+            return;
+        }
+
         // Create a form to send all the data to php and append data to it
         // document.getElementById("chosenNum").textContent = generatedNum; // COMMENT 3/3 FOR DISPLAYER
         $("#betOdd").attr('disabled', true);
@@ -88,7 +97,6 @@ function evenBet() {
 
         setTimeout(
             function() {
-                console.log(timeToWait);
                 $("#betOdd").attr('disabled', false);
                 $("#betEven").attr('disabled', false);
 
@@ -119,4 +127,4 @@ function evenBet() {
 }
 
 
-// Prevent user from submitting negative values
+// I have to figure out If this is safe, I feel like this is the only file that might be vulnerable to attacks, bcs everything else is on the server

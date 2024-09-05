@@ -8,7 +8,7 @@ function lightMode(){
     else {
         light = 1;
         document.getElementById('cssTheme').setAttribute('href', 'css/style1.css');
-        document.getElementById('bulb').setAttribute('src', 'images/bulb.png')
+        document.getElementById('bulb').setAttribute('src', 'images/bulb.png');
     }
 }
 

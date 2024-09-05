@@ -8,8 +8,6 @@ function validateGeneratedNum($num) {
     return abs($num);
 }
 
-
-
 // Generate a number
 $generatedNum = numGenerate();
 
