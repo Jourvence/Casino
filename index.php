@@ -66,9 +66,7 @@ require_once 'includes/betOdd.php';
             <button id="betOdd" name="betOdd" class="btn btn-primary mr-2" onclick="oddBet()">Bet on odd</button>
             <button id="betEven" name="betEven" class="btn btn-secondary ml-2" onclick="evenBet()">Bet on even</button>
             
-            <h1 class="mt-5">The chosen number is: <span id="chosenNum" name="chosenNum"></span></h1>
-             <!-- I will keep this for now If I ever need to test, but when I finish I need to remember to delete It's logic alongside it and not just the button -->
-           
+            <!-- <h1 class="mt-5">The chosen number is: <span id="chosenNum" name="chosenNum"></span></h1> --> <!-- COMMENT 1/3 FOR DISPLAYER -->
         </div>
     </div>
     <!-- jQuery -->
@@ -78,6 +76,3 @@ require_once 'includes/betOdd.php';
     <script src="scroll.js"></script>
 </body>
 </html>
-
-
-<!-- This is still broken since the user can input some dumb number like 1.4 or maybe even not a number to the input field, and he can change the js code so that's also broken -->
