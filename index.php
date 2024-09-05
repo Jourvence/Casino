@@ -29,8 +29,6 @@ require_once 'includes/betOdd.php';
     <title>The Grand Casino</title>
     <!-- Bootstrap -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <!-- JQuery -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <!-- Js box load -->
     <script src="boxLoader.js"></script>
     <!-- lightMode -->
@@ -49,7 +47,7 @@ require_once 'includes/betOdd.php';
     <div class="container text-center">
         <h1 class="mt-5">The Grand Casino Inc.</h1>
         <div class="mainContainer">
-            <!-- Scrollable area with boxes -->
+            <!-- Boxes -->
             <div class="rouletteBoxesContainer" id="test7">
 
             </div>
@@ -69,9 +67,7 @@ require_once 'includes/betOdd.php';
             <!-- <h1 class="mt-5">The chosen number is: <span id="chosenNum" name="chosenNum"></span></h1> --> <!-- COMMENT 1/3 FOR DISPLAYER -->
         </div>
     </div>
-    <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <!-- Custom Script -->
     <script src="script.js"></script>
     <script src="scroll.js"></script>
 </body>

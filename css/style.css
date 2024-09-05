@@ -20,7 +20,7 @@ body {
     z-index: 20px;
 }
 
-/* bars  */
+/* bars */
 .rouletteBoxesContainer {
     display: flex;
     justify-content: center; /* Center the boxes horizontally */
@@ -46,6 +46,7 @@ body {
 
 .navbar {
     border-bottom: 2px solid black; /* Black border at the bottom of the navbar */
+    background-color: #f8f9fa;
 }
 
 h1, h2 {

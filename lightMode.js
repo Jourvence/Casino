@@ -2,7 +2,7 @@ light = 1;
 function lightMode(){
     if (light){
         light = 0;
-        document.body.style.backgroundColor = 'rgb(69, 69, 69)';
+        document.body.style.backgroundColor = '#f8f9fa';
     }
     else {
         light = 1;
