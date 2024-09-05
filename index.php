@@ -22,7 +22,7 @@ require_once 'includes/creditCounter.php';
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">The Grand Casino</a>
-        <img id="bulb" src="images/bulb.png" onclick="lightMode()"></>
+        <img id="bulb" src="images/moonDark.png" onclick="lightMode()"></>
     </nav>
 
     <!-- Main Content -->

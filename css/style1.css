@@ -89,6 +89,5 @@ h1, h2 {
 #bulb{
     width: 25px;
     height: 25px;
-    margin-bottom: 5px;
     cursor: pointer;
 }
