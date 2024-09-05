@@ -1,7 +1,5 @@
 <?php
-require_once 'includes/numGen.php';
 require_once 'includes/creditCounter.php'; 
-require_once 'includes/betOdd.php';
 ?>
 
 <!DOCTYPE html>
@@ -14,8 +12,8 @@ require_once 'includes/betOdd.php';
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <!-- Js box load -->
     <script src="boxLoader.js"></script>
-    <!-- lightMode -->
-    <script src="lightMode.js"></script>
+    <!-- Themes -->
+    <script src="theme.js"></script>
     <!-- CSS -->
     <link id="cssTheme" rel="stylesheet" href="css/style1.css">
 </head>
@@ -35,7 +33,7 @@ require_once 'includes/betOdd.php';
             <div class="rouletteBoxesContainer" id="test7">
 
             </div>
-            <div class="RouletteLine"></div> 
+            <div class="rouletteLine"></div> 
         </div>
         <h2 class="mt-3">You currently have: <span id="curCreds"><?php echo $currentCredits; ?></span> credits</h2>
 
@@ -48,7 +46,7 @@ require_once 'includes/betOdd.php';
             <button id="betOdd" name="betOdd" class="btn btn-primary mr-2" onclick="oddBet()">Bet on odd</button>
             <button id="betEven" name="betEven" class="btn btn-secondary ml-2" onclick="evenBet()">Bet on even</button>
             
-            <h1 class="mt-5">The chosen number is: <span id="chosenNum" name="chosenNum"></span></h1> <!-- COMMENT 1/3 FOR DISPLAYER -->
+            <!-- <h1 class="mt-5">The chosen number is: <span id="chosenNum" name="chosenNum"></span></h1> COMMENT 1/3 FOR DISPLAYER -->
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>

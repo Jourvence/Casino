@@ -19,7 +19,7 @@ function oddBet() {
         curBet = Math.abs(Number(curBet));
 
         // Create a form to send all the data to php and append data to it
-        document.getElementById("chosenNum").textContent = generatedNum; // COMMENT 2/3 FOR DISPLAYER
+        // document.getElementById("chosenNum").textContent = generatedNum; // COMMENT 2/3 FOR DISPLAYER
         $("#betOdd").attr('disabled', true);
         $("#betEven").attr('disabled', true);
         timeToWait = moveEm(generatedNum);
@@ -80,7 +80,7 @@ function evenBet() {
         curBet = Math.abs(Number(curBet));
 
         // Create a form to send all the data to php and append data to it
-        document.getElementById("chosenNum").textContent = generatedNum; // COMMENT 3/3 FOR DISPLAYER
+        // document.getElementById("chosenNum").textContent = generatedNum; // COMMENT 3/3 FOR DISPLAYER
         $("#betOdd").attr('disabled', true);
         $("#betEven").attr('disabled', true);
         timeToWait = moveEm(generatedNum);
@@ -119,8 +119,3 @@ function evenBet() {
 }
 
 
-
-// After It's finished rolling then I need to update the users credits
-// Only numbers will work for the wheel but It seems to work for now
-// I need the dark/Light mode
-// And prefferably a user login with the credits saved If I feel extra motivated

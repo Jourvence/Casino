@@ -10,4 +10,4 @@ function lightMode(){
     }
 }
 
-// This is shit
+// This is less shit

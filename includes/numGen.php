@@ -8,6 +8,8 @@ function validateGeneratedNum($num) {
     return abs($num);
 }
 
+
+
 // Generate a number
 $generatedNum = numGenerate();
 
@@ -24,4 +26,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 // Output the JSON response
 echo json_encode($response);
+
+
 ?>
