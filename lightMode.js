@@ -2,11 +2,11 @@ light = 1;
 function lightMode(){
     if (light){
         light = 0;
-        document.body.style.backgroundColor = '#f8f9fa';
+        document.getElementById('cssTheme').setAttribute('href', 'css/style2.css')
     }
     else {
         light = 1;
-        document.body.style.backgroundColor = 'rgb(255, 255, 255)';
+        document.getElementById('cssTheme').setAttribute('href', 'css/style1.css')
     }
 }
 

@@ -19,7 +19,7 @@ function oddBet() {
         curBet = Math.abs(Number(curBet));
 
         // Create a form to send all the data to php and append data to it
-        // document.getElementById("chosenNum").textContent = generatedNum; COMMENT 2/3 FOR DISPLAYER
+        document.getElementById("chosenNum").textContent = generatedNum; // COMMENT 2/3 FOR DISPLAYER
         $("#betOdd").attr('disabled', true);
         $("#betEven").attr('disabled', true);
         timeToWait = moveEm(generatedNum);
@@ -80,7 +80,7 @@ function evenBet() {
         curBet = Math.abs(Number(curBet));
 
         // Create a form to send all the data to php and append data to it
-        // document.getElementById("chosenNum").textContent = generatedNum; // COMMENT 3/3 FOR DISPLAYER
+        document.getElementById("chosenNum").textContent = generatedNum; // COMMENT 3/3 FOR DISPLAYER
         $("#betOdd").attr('disabled', true);
         $("#betEven").attr('disabled', true);
         timeToWait = moveEm(generatedNum);
