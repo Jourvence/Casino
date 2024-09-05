@@ -134,3 +134,11 @@ p, li {
 #betDiv button {
     width: 120px;
 }
+
+
+#bulb{
+    width: 25px;
+    height: 25px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}

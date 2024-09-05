@@ -119,3 +119,4 @@ function evenBet() {
 }
 
 
+// Prevent user from submitting negative values

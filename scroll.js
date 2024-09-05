@@ -1,18 +1,6 @@
 let rolledOnce = 0; 
 let offset2 = 0; 
 
-// // Get random number from php via ajax
-// function fetchRandomNumber() {
-//     return fetch('getRandNum.php') 
-//         .then(response => response.json())
-//         .then(data => data.randomNumber)
-//         .catch(error => {
-//             console.error('Error fetching random number:', error);
-//             return 0; 
-//         });
-// }
-
-
 function moveEm(usrVal) {
     // usrVal is supplied via ajax
 
@@ -101,11 +89,3 @@ function getOffset(val){
 
     }
 }
-
-// Make the button work
-// document.getElementById('testButton').addEventListener('click', function () {
-//     fetchRandomNumber().then(randomNumber => {
-//         moveEm(randomNumber); 
-//     });
-// });
-

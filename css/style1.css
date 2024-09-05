@@ -85,3 +85,10 @@ h1, h2 {
     cursor: pointer;
     border: 2px solid #2e2f30;
 }
+
+#bulb{
+    width: 25px;
+    height: 25px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
