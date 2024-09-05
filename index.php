@@ -67,8 +67,8 @@ require_once 'includes/betOdd.php';
             <button id="betEven" name="betEven" class="btn btn-secondary ml-2" onclick="evenBet()">Bet on even</button>
             
             <h1 class="mt-5">The chosen number is: <span id="chosenNum" name="chosenNum"></span></h1>
-            <!-- <button id="testButton">SPIN</button> -->
-            <!-- Now I need to make this number provided from php -->
+             <!-- I will keep this for now If I ever need to test, but when I finish I need to remember to delete It's logic alongside it and not just the button -->
+           
         </div>
     </div>
     <!-- jQuery -->
