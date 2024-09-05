@@ -22,7 +22,10 @@ require_once 'includes/creditCounter.php';
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">The Grand Casino</a>
-        <img id="bulb" src="images/moonDark.png" onclick="lightMode()"></>
+        <div class="navbar-nav ml-auto">
+        <img id="moon" src="images/moonDark.png" onclick="lightMode()" alt="moon">
+        <a href="https://github.com/Jourvence"><img id="github" src="images/githubDark.png" alt="githubJourvence"></a>
+        </div>
     </nav>
 
     <!-- Main Content -->
@@ -31,8 +34,7 @@ require_once 'includes/creditCounter.php';
         <div class="mainContainer">
             <!-- Boxes -->
             <div class="rouletteBoxesContainer" id="test7">
-
-            </div>
+        </div>
             <div class="rouletteLine"></div> 
         </div>
         <h2 class="mt-3">You currently have: <span id="curCreds"><?php echo $currentCredits; ?></span> credits</h2>

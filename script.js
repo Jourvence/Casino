@@ -7,7 +7,6 @@ function oddBet() {
         try{
             var response = JSON.parse(this.responseText);
             var generatedNum = response.generatedNum;
-            console.log("Parsed generatedNum: " + generatedNum);
         }
         catch (e){
             console.error("Error parsing JSON: ", e);
@@ -19,6 +18,7 @@ function oddBet() {
         var curCredits = document.getElementById("curCreds").innerHTML;
         curBet = Math.abs(Number(curBet));
 
+        console.log("i feel awful about this project");
         if (curBet > curCredits){
             return;
         }
@@ -29,9 +29,9 @@ function oddBet() {
         $("#betEven").attr('disabled', true);
         timeToWait = moveEm(generatedNum);
 
+
         setTimeout(
             function() {
-                console.log(timeToWait);
                 $("#betOdd").attr('disabled', false);
                 $("#betEven").attr('disabled', false);
 
@@ -50,14 +50,14 @@ function oddBet() {
                     document.getElementById("curCreds").innerHTML = this.responseText;
                     }
                 };
-
+// This is where the betOdd.php get's data, so I'd say that's preety far gone
                 betRequest.open("POST", "includes/betOdd.php", true);
                 betRequest.send(formData);
 
             }, Number(timeToWait) * 1000);
 
-    }
-};
+            }
+        };
     xmlhttp.open("GET", "includes/numGen.php", true);
     xmlhttp.send();
 }
@@ -72,7 +72,6 @@ function evenBet() {
             try{
                 var response = JSON.parse(this.responseText);
                 var generatedNum = response.generatedNum;
-                console.log("Parsed generatedNum: " + generatedNum);
             }
             catch (e){
                 console.error("Error parsing JSON: ", e);
@@ -120,11 +119,12 @@ function evenBet() {
                 betRequest.send(formData);
             }, Number(timeToWait) * 1000);
 
-    }
-};
+        }
+    };
     xmlhttp.open("GET", "includes/numGen.php", true);
     xmlhttp.send();
 }
 
 
 // I have to figure out If this is safe, I feel like this is the only file that might be vulnerable to attacks, bcs everything else is on the server
+// I have to figure out how to prevent from betting with insufficient funds serverside

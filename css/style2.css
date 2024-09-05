@@ -136,7 +136,14 @@ p, li {
 }
 
 
-#bulb{
+#moon{
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+#github{
     width: 25px;
     height: 25px;
     cursor: pointer;
