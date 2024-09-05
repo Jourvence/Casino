@@ -19,7 +19,8 @@ function moveEm(usrVal) {
     const container = document.querySelector(".rouletteBoxesContainer");
     const boxes = container.children;
     usrVal = Number(usrVal);
-    transitionTime = Math.floor(Math.random(6) + 3);
+    transitionTime = Math.floor(Math.random() * 5) + 3;
+    
 
     if (rolledOnce) {
         

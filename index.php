@@ -29,6 +29,8 @@ require_once 'includes/betOdd.php';
     <title>The Grand Casino</title>
     <!-- Bootstrap -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <!-- Js box load -->
     <script src="boxLoader.js"></script>
     <!-- lightMode -->

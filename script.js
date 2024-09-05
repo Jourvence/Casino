@@ -14,6 +14,7 @@ function oddBet() {
         }
         
     // Get the number of coins text
+
     var curBet = document.getElementById("betInput").value;
     var curCredits = document.getElementById("curCreds").innerHTML;
     curBet = Math.abs(Number(curBet));
@@ -21,9 +22,16 @@ function oddBet() {
     // Create a form to send all the data to php and append data to it
     document.getElementById("chosenNum").textContent = generatedNum;
 
-
+    $("#betOdd").attr('disabled', true);
+    $("#betEven").attr('disabled', true);
     timeToWait = moveEm(generatedNum);
-   
+    setTimeout(
+        function() 
+        {
+            console.log(timeToWait);
+            $("#betOdd").attr('disabled', false);
+            $("#betEven").attr('disabled', false);
+        }, Number(timeToWait) * 1000);
 
     var formData = new FormData();
     if (generatedNum % 2){
@@ -76,8 +84,16 @@ function evenBet() {
     // Create a form to send all the data to php and append data to it
     document.getElementById("chosenNum").textContent = generatedNum;
 
-    timeToWait = moveEm(generatedNum)
-   
+    $("#betOdd").attr('disabled', true);
+    $("#betEven").attr('disabled', true);
+    timeToWait = moveEm(generatedNum);
+    setTimeout(
+        function() 
+        {
+            console.log(timeToWait);
+            $("#betOdd").attr('disabled', false);
+            $("#betEven").attr('disabled', false);
+        }, Number(timeToWait) * 1000);
 
     var formData = new FormData();
     if (generatedNum % 2){
