@@ -128,3 +128,5 @@ function evenBet() {
 
 // I have to figure out If this is safe, I feel like this is the only file that might be vulnerable to attacks, bcs everything else is on the server
 // I have to figure out how to prevent from betting with insufficient funds serverside
+
+// Plan for today, add a login system and a button to add cash

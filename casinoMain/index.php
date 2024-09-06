@@ -1,5 +1,25 @@
 <?php
 require_once 'includes/creditCounter.php'; 
+
+$host = 'localhost';
+$dbname = 'roulettedatabase';
+$dbusername = 'root';
+$dbpassword = '';
+$username = $_GET['login'];
+try {
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname", $dbusername, $dbpassword);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    die("Connection failed: " . $e->getMessage());
+
+}
+
+$query = "SELECT funds FROM users WHERE username = :username";
+$stmt = $pdo->prepare($query);
+$stmt->bindParam(":username", $username);
+$stmt->execute();
+$result = $stmt->fetch(PDO::FETCH_ASSOC);
+
 ?>
 
 <!DOCTYPE html>
@@ -11,9 +31,9 @@ require_once 'includes/creditCounter.php';
     <!-- Bootstrap -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <!-- Js box load -->
-    <script src="boxLoader.js"></script>
+    <script src="js/boxLoader.js"></script>
     <!-- Themes -->
-    <script src="theme.js"></script>
+    <script src="js/theme.js"></script>
     <!-- CSS -->
     <link id="cssTheme" rel="stylesheet" href="css/style1.css">
 </head>
@@ -21,7 +41,20 @@ require_once 'includes/creditCounter.php';
 <body onload="loadBoxes()">
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">The Grand Casino</a>
+        <a class="navbar-brand" href="">The Grand Casino</a>
+        <a class="nav-link active" aria-current="page">
+            <?php 
+                $username = $_GET["login"];
+                echo 'You\'re logged in as:  ' . $username;
+            ?>
+        </a>
+        <a class="nav-link active" aria-current="page">
+            <span>Current funds: <span id="funds" style="color:green">
+            <?php foreach ($result as $key=>$item){
+                echo "$item";
+                }?>
+                </span></span>
+        </a>
         <div class="navbar-nav ml-auto">
         <img id="moon" src="images/moonDark.png" onclick="lightMode()" alt="moon">
         <a href="https://github.com/Jourvence"><img id="github" src="images/githubDark.png" alt="githubJourvence"></a>
@@ -31,6 +64,7 @@ require_once 'includes/creditCounter.php';
     <!-- Main Content -->
     <div class="container text-center">
         <h1 class="mt-5">The Grand Casino Inc.</h1>
+    
         <div class="mainContainer">
             <!-- Boxes -->
             <div class="rouletteBoxesContainer" id="test7">
@@ -52,7 +86,7 @@ require_once 'includes/creditCounter.php';
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="script.js"></script>
-    <script src="scroll.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/scroll.js"></script>
 </body>
 </html>
