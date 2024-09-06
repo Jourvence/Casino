@@ -71,7 +71,7 @@ $result = $stmt->fetch(PDO::FETCH_ASSOC);
         </div>
             <div class="rouletteLine"></div> 
         </div>
-        <h2 class="mt-3">You currently have: <span id="curCreds"><?php echo $currentCredits; ?></span> credits</h2>
+        <h2 class="mt-3">You currently have: <span id="curCreds"><?php foreach ($result as $key=>$item){echo "$item";} ?></span> credits</h2>
 
 
         <div id="amountDiv" class="mt-4">
@@ -79,8 +79,8 @@ $result = $stmt->fetch(PDO::FETCH_ASSOC);
         </div>
 
         <div id="betDiv" class="mt-4">
-            <button id="betOdd" name="betOdd" class="btn btn-primary mr-2" onclick="oddBet()">Bet on odd</button>
-            <button id="betEven" name="betEven" class="btn btn-secondary ml-2" onclick="evenBet()">Bet on even</button>
+            <button id="betOdd" name="betOdd" class="btn btn-primary mr-2" onclick="oddBet('<?php echo $username?>')">Bet on odd</button>
+            <button id="betEven" name="betEven" class="btn btn-secondary ml-2" onclick="evenBet('<?php echo $username?>')">Bet on even</button>
             
             <!-- <h1 class="mt-5">The chosen number is: <span id="chosenNum" name="chosenNum"></span></h1> COMMENT 1/3 FOR DISPLAYER -->
         </div>

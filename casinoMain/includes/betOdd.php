@@ -1,21 +1,13 @@
 <?php 
-
-function debug_to_console($data) {
-    $output = $data;
-    if (is_array($output))
-        $output = implode(',', $output);
-
-    echo "<script>console.log('Debug Objects: " . $output . "' );</script>";
-}
-
 $odd = isset($_POST["odd"]) ? (int)$_POST["odd"] : 0;
 $curBet = isset($_POST["curBet"]) ? (int)$_POST["curBet"] : 0;
 $curCredits = isset($_POST["curCredits"]) ? (int)$_POST["curCredits"] : 0;
+$currentUsername = $_POST["currentUsername"];
 
+$changed = 0;
 
 if ($odd == 1){
     $changed = $curCredits - ($curBet);
-
     echo $changed;
 }
 else if ($odd == 2){
@@ -40,15 +32,15 @@ else if ($odd == 2){
 
  // SQL query to update the database
  $sql = "UPDATE users SET funds = :funds WHERE username = :username";
-
+ 
  try {
      $stmt = $pdo->prepare($sql);
-     $stmt->bindParam(':speed', $speed);
+     $stmt->bindParam(':funds', $changed);
     //  This is empty preetyMuch
-     $stmt->bindParam(':username', $dbNick);
+     $stmt->bindParam(':username', $currentUsername);
      $stmt->execute();
 
-     echo "Record updated successfully";
+    //  echo " aa $currentUsername aa funds updated successfully";
  } catch (PDOException $e) {
      echo "Error updating record: " . $e->getMessage();
  }

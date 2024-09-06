@@ -1,4 +1,4 @@
-function oddBet() {
+function oddBet(currentUsername) {
     // This works 
     
     var xmlhttp = new XMLHttpRequest();
@@ -33,7 +33,8 @@ function oddBet() {
 
 // HERE I NEED TO SEND ALSO THE CURRENTLY LOGGED IN USERNAME TO betOdd.php so that i have a propper $dbNick
 
-
+       
+        
         setTimeout(
             function() {
                 $("#betOdd").attr('disabled', false);
@@ -47,6 +48,9 @@ function oddBet() {
                 }   
                 formData.append("curBet", curBet);
                 formData.append("curCredits", curCredits);
+                formData.append("currentUsername", currentUsername);
+
+                
 
                 var betRequest = new XMLHttpRequest();
                 betRequest.onreadystatechange = function() {
@@ -64,12 +68,13 @@ function oddBet() {
         };
     xmlhttp.open("GET", "includes/numGen.php", true);
     xmlhttp.send();
-}
+    document.getElementById("funds").innerHTML = 
+    }
 
 
 
 
-function evenBet() {
+function evenBet(currentUsername) {
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
@@ -111,6 +116,7 @@ function evenBet() {
                 }   
                 formData.append("curBet", curBet);
                 formData.append("curCredits", curCredits);
+                formData.append("currentUsername", currentUsername);
 
                 var betRequest = new XMLHttpRequest();
                 betRequest.onreadystatechange = function() {
