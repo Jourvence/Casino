@@ -35,7 +35,7 @@ $result = $stmt->fetch(PDO::FETCH_ASSOC);
     <!-- Themes -->
     <script src="js/theme.js"></script>
     <!-- CSS -->
-    <link id="cssTheme" rel="stylesheet" href="css/style1.css">
+    <link id="cssTheme" rel="stylesheet" href="css/style2.css">
 </head>
 
 <body onload="loadBoxes()">
@@ -56,8 +56,8 @@ $result = $stmt->fetch(PDO::FETCH_ASSOC);
                 </span></span>
         </a>
         <div class="navbar-nav ml-auto">
-        <img id="moon" src="images/moonDark.png" onclick="lightMode()" alt="moon">
-        <a href="https://github.com/Jourvence"><img id="github" src="images/githubDark.png" alt="githubJourvence"></a>
+        <img id="moon" src="images/moonLight.png" onclick="lightMode()" alt="moon">
+        <a href="https://github.com/Jourvence"><img id="github" src="images/githubLight.png" alt="githubJourvence"></a>
         </div>
     </nav>
 
