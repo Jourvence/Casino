@@ -52,6 +52,3 @@ require_once 'includes/login_view.inc.php';
     </div>
 </body>
 </html>
-
-
-<!-- Figure out why the login_view.inc.php doesn't work -->

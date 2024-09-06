@@ -1,7 +1,8 @@
 <?php
+session_start();
+
 if ($_SERVER["REQUEST_METHOD"] === "POST"){
-    // Get the data from the user
-    // THIS Doesn't get the data for some reason
+
     $username = $_POST["username"];
     $password = $_POST["password"];
 
@@ -12,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST"){
 
         // ERROR HANDLERS
         $errors = [];
-        // this is the broken bit becasue the username and password isn't grabbed from the index for some reason
+   
 
         if (is_input_empty($username, $password)){
             $errors["empty_input"] = "Fill in all the fields!";

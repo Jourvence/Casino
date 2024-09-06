@@ -46,3 +46,12 @@ CREATE TABLE users (
 So everything is sick and all but I'll need to change a bunch of shit but that's good
 I will need to read data from the database and have it displayed that way
 Instead of updating it with js
+
+
+@rafaelbroseghini985
+1 rok temu (edytowany)
+I once challenged myself to email some of the smartest people in CS including Bjarne and Paul Graham. I ended up finding Bjarne’s email. This was early in my career and I asked for advice, 
+and he responded: “Be a nice guy and support your colleagues. Try not to work on organizations where people are not nice to each other. Learn to communicate your ideas verbally and in writing”
+
+In oreder for It to be even remotely secured I need to have the casino automatically roll, and the user can just place bets and wait for the server to roll
+so Let's make a timer animation type thing

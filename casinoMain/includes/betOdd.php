@@ -36,11 +36,11 @@ else if ($odd == 2){
  try {
      $stmt = $pdo->prepare($sql);
      $stmt->bindParam(':funds', $changed);
-    //  This is empty preetyMuch
+    // This is empty preetyMuch
      $stmt->bindParam(':username', $currentUsername);
      $stmt->execute();
 
-    //  echo " aa $currentUsername aa funds updated successfully";
+    // echo " aa $currentUsername aa funds updated successfully";
  } catch (PDOException $e) {
      echo "Error updating record: " . $e->getMessage();
  }
