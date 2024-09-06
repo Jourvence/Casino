@@ -30,6 +30,10 @@ function oddBet() {
         timeToWait = moveEm(generatedNum);
 
 
+
+// HERE I NEED TO SEND ALSO THE CURRENTLY LOGGED IN USERNAME TO betOdd.php so that i have a propper $dbNick
+
+
         setTimeout(
             function() {
                 $("#betOdd").attr('disabled', false);

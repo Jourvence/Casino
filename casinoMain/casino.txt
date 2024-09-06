@@ -44,5 +44,5 @@ CREATE TABLE users (
 );
 
 So everything is sick and all but I'll need to change a bunch of shit but that's good
-I will need to just read shit from the database and have it written that way
+I will need to read data from the database and have it displayed that way
 Instead of updating it with js
