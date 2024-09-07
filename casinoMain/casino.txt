@@ -58,3 +58,4 @@ so Let's make a timer animation type thing
 
 I managed to get the username in the $username variable with a session instead of get from the url
 I need to fix the way my betting buttons work, and I also need to make a logout button that just takes the user back to the login page.
+I need to show It to zuzia with 2 different sessions on 2 browsers the way it logs in automatically and the way it redirects back when you logout becasue that's sick af
