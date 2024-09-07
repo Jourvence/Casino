@@ -68,8 +68,6 @@ function oddBet(currentUsername) {
         };
     xmlhttp.open("GET", "includes/numGen.php", true);
     xmlhttp.send();
-    document.getElementById("funds").innerHTML = 
-    }
 
 
 
