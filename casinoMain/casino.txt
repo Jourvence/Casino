@@ -55,3 +55,5 @@ and he responded: “Be a nice guy and support your colleagues. Try not to work 
 
 In oreder for It to be even remotely secured I need to have the casino automatically roll, and the user can just place bets and wait for the server to roll
 so Let's make a timer animation type thing
+
+I managed to get the username in the $username variable with a session instead of 

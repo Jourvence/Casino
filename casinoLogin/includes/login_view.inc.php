@@ -21,6 +21,8 @@ function check_login_errors($name){
         echo '<br>';
         echo '<p class ="form-success">The username is: ' . $name . '</p>';
 
-        header("Location: http://localhost/firstSight/AjaxCasino/Casino/casinoMain/?login=$name");
+        header("Location: http://localhost/firstSight/AjaxCasino/Casino/casinoMain");
     }
 }
+
+// I need to work on this header so that It sends to the actual file instead of a link because I think that that's not the smartest way of doing it

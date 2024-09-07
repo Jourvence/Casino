@@ -1,5 +1,4 @@
 <!-- This whole file is basically a session security thing, for cookies etc -->
-
 <?php
 
 ini_set('session.use_only_cookies', 1);

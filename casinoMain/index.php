@@ -1,11 +1,24 @@
 <?php
+session_start();  // Start the session
+
+if (!isset($_SESSION['username'])) {
+    header("Location: http://localhost/firstSight/AjaxCasino/Casino/casinoLogin/");
+    exit();
+}
+
+// Same case as in login_view.inc.php need to make it go to the file instead of a link, but idk It works PREETY DAMN WELL for now :)
+
+$username = $_SESSION['username'];
+
+
+
 require_once 'includes/creditCounter.php'; 
 
 $host = 'localhost';
 $dbname = 'roulettedatabase';
 $dbusername = 'root';
 $dbpassword = '';
-$username = $_GET['login'];
+
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname", $dbusername, $dbpassword);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -44,7 +57,6 @@ $result = $stmt->fetch(PDO::FETCH_ASSOC);
         <a class="navbar-brand" href="">The Grand Casino</a>
         <a class="nav-link active" aria-current="page">
             <?php 
-                $username = $_GET["login"];
                 echo 'You\'re logged in as:  ' . $username;
             ?>
         </a>
@@ -81,7 +93,11 @@ $result = $stmt->fetch(PDO::FETCH_ASSOC);
         <div id="betDiv" class="mt-4">
             <button id="betOdd" name="betOdd" class="btn btn-primary mr-2" onclick="oddBet('<?php echo $username?>')">Bet on odd</button>
             <button id="betEven" name="betEven" class="btn btn-secondary ml-2" onclick="evenBet('<?php echo $username?>')">Bet on even</button>
-            
+
+            <!-- This defeneitly needs work, I think that the ideal solution is to also just use something like this <form action="includes/login.inc.php" method="post"> instead of a js function with php variable inside of it -->
+                <!-- I feel like doing is with my current approach is just like asking for problems lol, the post one seems smart, because even if the user changes it, it will just redirect him nowhere, and nothing will happen -->
+                    <!-- And that's kindoff what I want to happen -->
+
             <!-- <h1 class="mt-5">The chosen number is: <span id="chosenNum" name="chosenNum"></span></h1> COMMENT 1/3 FOR DISPLAYER -->
         </div>
     </div>
@@ -90,3 +106,5 @@ $result = $stmt->fetch(PDO::FETCH_ASSOC);
     <script src="js/scroll.js"></script>
 </body>
 </html>
+
+<!-- Now the username is sent via a session in the $username variable instead of being embedded in the url -->

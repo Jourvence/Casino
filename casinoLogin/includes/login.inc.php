@@ -1,19 +1,20 @@
 <?php
-session_start();
+require_once "dbh.inc.php";
+require_once "login_contr.inc.php";
+require_once "login_view.inc.php";
+require_once "login_model.inc.php";
 
 if ($_SERVER["REQUEST_METHOD"] === "POST"){
 
     $username = $_POST["username"];
     $password = $_POST["password"];
 
-    try {
-        require_once 'dbh.inc.php';
-        require_once 'login_model.inc.php';
-        require_once 'login_contr.inc.php';
+    $errors = [];
 
-        // ERROR HANDLERS
-        $errors = [];
-   
+    if (empty($username) || empty($password)) {
+        header("Location: ../index.php?error=emptyfields");
+        exit();
+    } else {
 
         if (is_input_empty($username, $password)){
             $errors["empty_input"] = "Fill in all the fields!";
@@ -39,26 +40,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST"){
 
         // This will create an entirely new id
         // Were creating a new SESSION id and we add (append) the USER id to it, so that we know that the user is logged in 
-        $newSessionId = session_create_id();
-        $sessionId = $newSessionId . "_" . $result["id"];
-        session_id($sessionId);
-
-        $_SESSION["user_id"] = $result["id"];
-        $_SESSION["user_username"] = htmlspecialchars($result["username"]);
-        // Reset the last regeneration (I think so at least, ep29 dani tutorial 32:50) so that in 30 min it updates to a new one
-        $_SESSION["last_regeneration"] = time();
-        $_SESSION["userName"] = $username;
+        $_SESSION['username'] = $username;
         header("Location: ../index.php?login=success&userName=$username");
-        $pdo = null;
-        $stmt = null;
+        // BASICALLY THIS REDIRECTS BACK TO THE MAIN LOGIN PAGE AKA index.php, then once It's in index php with the data in the url, it goes to login_view.inc.php which redirects to casine
+        
 
-        die();
-    } catch (PDOException $e) {
-        die("Query failed: " . $e->getMessage());
+        exit();
     }
+} else{
+    header("Location: ../index.php");
+    exit();
 }
 
-else{
-    header("Location: ../index.php");
-    die();
-}
